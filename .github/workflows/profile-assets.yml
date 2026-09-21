@@ -1,0 +1,71 @@
+name: Update profile assets
+
+on:
+  schedule:
+    - cron: '23 6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main, codex/terminal-profile]
+    paths:
+      - '.github/workflows/profile-assets.yml'
+      - '.github/scripts/public-stats.py'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-assets-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      # Use only the repository token, never a PAT with access to private repos.
+      - name: Generate GitHub statistics
+        run: python3 .github/scripts/public-stats.py
+
+      - name: Generate public language statistics
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: top-langs
+          options: username=DavidB4astos&hide=HTML,CSS,JavaScript&custom_title=Most%20Used%20Data%20Languages&layout=compact&bg_color=0d1117&title_color=ef4444&text_color=c9d1d9&border_color=30363d
+          path: assets/languages.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: 'true'
+
+      - name: Generate real contribution snakes
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: DavidB4astos
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          outputs: |
+            assets/github-snake.svg?color_snake=#dc2626&color_dots=#ebedf0,#fecaca,#f87171,#ef4444,#991b1b
+            assets/github-snake-dark.svg?palette=github-dark&color_snake=#ef4444&color_dots=#161b22,#3f171e,#7f1d1d,#b91c1c,#ef4444
+
+      - name: Save generated assets
+        env:
+          TARGET_BRANCH: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          for file in stats languages github-snake github-snake-dark; do
+            test -s "assets/$file.svg"
+            grep -q '<svg' "assets/$file.svg"
+            if grep -Eqi 'Something went wrong|Resource not accessible|rate limit exceeded' "assets/$file.svg"; then
+              echo "Error card detected: $file" >&2
+              exit 1
+            fi
+          done
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/stats.svg assets/languages.svg assets/github-snake.svg assets/github-snake-dark.svg
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m 'chore: refresh public profile assets'
+          git push origin "HEAD:$TARGET_BRANCH"

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="450" height="195" viewBox="0 0 450 195" role="img" aria-labelledby="title">
+<title id="title">David Bastos — public GitHub statistics</title>
+<rect x="0.5" y="0.5" width="449" height="194" rx="6" fill="#0d1117" stroke="#30363d"/>
+<g font-family="'Segoe UI', Ubuntu, sans-serif" font-size="14">
+<text x="25" y="36" fill="#ef4444" font-size="20" font-weight="600">GitHub Stats</text>
+<text x="25" y="78" fill="#c9d1d9">Public repositories</text><text x="420" y="78" text-anchor="end" fill="#f0f6fc">4</text>
+<text x="25" y="108" fill="#c9d1d9">Stars earned</text><text x="420" y="108" text-anchor="end" fill="#f0f6fc">1</text>
+<text x="25" y="138" fill="#c9d1d9">Forks of original projects</text><text x="420" y="138" text-anchor="end" fill="#f0f6fc">0</text>
+<text x="25" y="168" fill="#c9d1d9">Followers</text><text x="420" y="168" text-anchor="end" fill="#f0f6fc">37</text>
+</g></svg>

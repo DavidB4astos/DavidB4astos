@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="280" viewBox="0 0 900 280" role="img" aria-labelledby="title desc">
+  <title id="title">David Bastos</title>
+  <desc id="desc">Computer Science Student and E-commerce Analyst. Terminal initialized.</desc>
+  <rect x="1" y="1" width="898" height="278" rx="12" fill="#0d1117" stroke="#30363d"/>
+  <path d="M13 1h874a12 12 0 0 1 12 12v30H1V13A12 12 0 0 1 13 1" fill="#161b22"/>
+  <circle cx="24" cy="22" r="4" fill="#ef4444"/>
+  <circle cx="40" cy="22" r="4" fill="#484f58"/>
+  <circle cx="56" cy="22" r="4" fill="#484f58"/>
+  <g font-family="Consolas, 'Liberation Mono', monospace">
+    <text x="876" y="27" text-anchor="end" font-size="11" fill="#8b949e">david@github : ~</text>
+    <text x="40" y="79" font-size="12" letter-spacing="2" fill="#ef4444">SYSTEM INITIALIZED</text>
+    <text x="40" y="116" font-size="16" fill="#8b949e">david@github:~$ <tspan fill="#e6edf3">whoami</tspan></text>
+    <text x="38" y="176" font-size="48" font-weight="700" letter-spacing="3" fill="#f0f6fc">DAVID BASTOS</text>
+    <rect x="40" y="196" width="48" height="3" fill="#ef4444"/>
+    <text x="40" y="235" font-size="17" fill="#c9d1d9">Computer Science Student <tspan fill="#ef4444">/</tspan> E-commerce Analyst</text>
+    <text x="858" y="237" font-size="24" fill="#ef4444">_</text>
+  </g>
+</svg>
