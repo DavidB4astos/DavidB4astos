@@ -51,18 +51,16 @@ Status     : always learning...
 
 <sub>Public repositories only. Data-focused view: HTML, CSS and JavaScript are excluded; percentages refer to the remaining languages, not proficiency.</sub>
 
-## `> ./consume_contributions.sh`
+## `> ./snake_visual.sh`
 
 ```text
-> locating contributions...
+> loading decorative grid...
 > executing snake...
 ```
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="assets/github-snake.svg" />
-  <img src="assets/github-snake.svg" width="100%" alt="Animated snake following DavidB4astos's real GitHub contribution calendar" />
-</picture>
+<img src="assets/snake-decorative.svg" width="100%" alt="Decorative snake on a synthetic red grid; not a contribution chart" />
+
+<sub>Decorative animation — does not represent commits or contributions.</sub>
 
 ## `> ./contact.sh`
 
