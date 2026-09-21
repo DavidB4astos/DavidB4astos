@@ -22,18 +22,8 @@ Status     : always learning...
 
 ## `> ./skills.sh`
 
-<table>
-  <tr>
-    <td align="center" width="150">
-      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/microsoftsqlserver/microsoftsqlserver-original.svg" width="28" height="28" alt="SQL Server" /><br />
-      <strong>SQL Server · SQL</strong>
-    </td>
-    <td align="center" width="150">
-      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="28" height="28" alt="Python" /><br />
-      <strong>Python</strong>
-    </td>
-  </tr>
-</table>
+- <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/microsoftsqlserver/microsoftsqlserver-original.svg" width="24" height="24" alt="" /> **SQL Server · SQL**
+- <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="24" height="24" alt="" /> **Python**
 
 ## `> ls ./projects --featured`
 
