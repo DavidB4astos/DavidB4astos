@@ -23,7 +23,13 @@ Status     : always learning...
 ## `> ./skills.sh`
 
 - <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/microsoftsqlserver/microsoftsqlserver-original.svg" width="24" height="24" alt="" /> **SQL Server · SQL**
+- <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" width="24" height="24" alt="" /> **MySQL**
 - <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="24" height="24" alt="" /> **Python**
+- <img src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/file_type_excel.svg" width="24" height="24" alt="" /> **Excel**
+- <img src="assets/der.svg" width="24" height="24" alt="" /> **Modelagem de Dados · DER**
+- <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" width="24" height="24" alt="" /> **Git**
+- <img src="assets/github.svg" width="24" height="24" alt="" /> **GitHub**
+- <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" width="24" height="24" alt="" /> **VS Code**
 
 ## `> ls ./projects --featured`
 
