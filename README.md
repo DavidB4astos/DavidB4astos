@@ -22,13 +22,18 @@ Status     : always learning...
 
 ## `> ./skills.sh`
 
-```text
-> loading technical stack...
-
-DATABASE      SQL Server · SQL
-PROGRAMMING   Python
-TOOLS         Git · GitHub · VS Code
-```
+<table>
+  <tr>
+    <td align="center" width="150">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/microsoftsqlserver/microsoftsqlserver-original.svg" width="48" height="48" alt="SQL Server" /><br />
+      <strong>SQL Server · SQL</strong>
+    </td>
+    <td align="center" width="150">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="48" height="48" alt="Python" /><br />
+      <strong>Python</strong>
+    </td>
+  </tr>
+</table>
 
 ## `> ls ./projects --featured`
 
@@ -45,10 +50,10 @@ TOOLS         Git · GitHub · VS Code
 
 <p align="center">
   <img src="assets/stats.svg" width="450" alt="GitHub statistics for DavidB4astos — generated daily from public activity" />
-  <img src="assets/languages.svg" width="350" alt="Top languages in DavidB4astos's public repositories" />
+  <img src="assets/languages.svg" width="350" alt="Most used data languages in DavidB4astos's public repositories" />
 </p>
 
-<sub>Public repositories only. Language usage reflects repository code, not proficiency.</sub>
+<sub>Public repositories only. Data-focused view: HTML, CSS and JavaScript are excluded; percentages refer to the remaining languages, not proficiency.</sub>
 
 ## `> ./consume_contributions.sh`
 
