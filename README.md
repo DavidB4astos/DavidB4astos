@@ -69,7 +69,7 @@ TOOLS         Git · GitHub · VS Code
 > establishing connection...
 ```
 
-[`LINKEDIN`](https://www.linkedin.com/in/davidbastos13/) · David Bastos  
+[`LINKEDIN`](https://www.linkedin.com/in/davidbastos13/) · David Bastos<br />
 [`EMAIL`](mailto:david.bastos@live.com) · david.bastos@live.com
 
 ---

@@ -8,6 +8,7 @@ on:
     branches: [main, codex/terminal-profile]
     paths:
       - '.github/workflows/profile-assets.yml'
+      - '.github/scripts/public-stats.py'
 
 permissions:
   contents: write
@@ -27,13 +28,7 @@ jobs:
 
       # Use only the repository token, never a PAT with access to private repos.
       - name: Generate GitHub statistics
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: stats
-          options: username=DavidB4astos&show_icons=true&hide_rank=true&bg_color=0d1117&title_color=ef4444&text_color=c9d1d9&icon_color=ef4444&border_color=30363d
-          path: assets/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-          fail_on_error: 'true'
+        run: python3 .github/scripts/public-stats.py
 
       - name: Generate public language statistics
         uses: readme-tools/github-readme-stats-action@v1
@@ -61,6 +56,10 @@ jobs:
           for file in stats languages github-snake github-snake-dark; do
             test -s "assets/$file.svg"
             grep -q '<svg' "assets/$file.svg"
+            if grep -Eqi 'Something went wrong|Resource not accessible|rate limit exceeded' "assets/$file.svg"; then
+              echo "Error card detected: $file" >&2
+              exit 1
+            fi
           done
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
